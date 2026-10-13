@@ -22,9 +22,8 @@ Gratuito e de código aberto sob a [Licença MIT](LICENSE.txt), da
 
 ![Janela Organizar uses, com o escopo e as regras em uso](docs/screenshots/organize-uses.png)
 
-*A janela Organizar uses. As imagens desta página vêm do programa de demonstração
-incluído no repositório e mostram a interface em inglês; nomes de projeto e de units são
-exemplos.*
+*A janela Organizar uses. As imagens desta página mostram as janelas do produto fora da
+IDE, com a interface em inglês; nomes de projeto e de units são exemplos.*
 
 ## Visão rápida
 
@@ -68,7 +67,10 @@ mas não fazem parte dele não são tocados.
 **Prévia** abre a comparação do antes e depois. **Aplicar** analisa o escopo, informa
 quantas units vão mudar e pergunta Sim ou Não. Não é preciso abrir a prévia antes.
 
-![Comparação do antes e depois de uma unit](docs/screenshots/before-after.png)
+![Comparação do antes e depois de uma unit com 34 units no uses](docs/screenshots/antes-depois.png)
+
+*A mesma unit antes e depois: 34 units no `uses`, uma por linha, em ordem e separadas em
+grupos.*
 
 ### O que é salvo e o que não é
 

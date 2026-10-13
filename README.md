@@ -21,8 +21,8 @@ Free and open source under the [MIT License](LICENSE.txt), by
 
 ![Organize uses window, with the scope and the rules in use](docs/screenshots/organize-uses.png)
 
-*The Organize uses window. The screenshots on this page come from the demonstration
-program included in the repository; project and unit names are examples.*
+*The Organize uses window. The screenshots on this page show the windows of the product
+outside the IDE; project and unit names are examples.*
 
 ## Quick overview
 
@@ -64,7 +64,10 @@ folder but not in the project are not touched.
 **Preview** opens the before/after comparison. **Apply** analyses the scope, tells you how
 many units will change and asks Yes or No. You do not have to open the preview first.
 
-![Before and after comparison of a unit](docs/screenshots/before-after.png)
+![Before and after comparison of a unit with 34 units in its uses clauses](docs/screenshots/before-after.png)
+
+*The same unit before and after: 34 units in the `uses` clauses, one per line, sorted and
+separated in groups.*
 
 ### What is saved and what is not
 
