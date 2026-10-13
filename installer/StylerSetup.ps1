@@ -21,6 +21,8 @@ $Here = Split-Path -Parent $MyInvocation.MyCommand.Path
 if ($InstallDir -eq '') { $InstallDir = Join-Path $env:LOCALAPPDATA 'CSCoder\UnitStyler\bin' }
 if ($SourceDir -eq '') { $SourceDir = Join-Path $Here 'bin' }
 $Description = 'CS.Coder - Unit Styler'
+# What Component > Install Packages shows; the same text as {$DESCRIPTION} of the packages.
+$PackageDescription = 'CS.Coder - Unit Styler (https://www.cscoder.com.br)'
 $Versions = @(
   @{ Key = '22.0'; Tag = 'D11'; Name = 'Delphi 11' },
   @{ Key = '23.0'; Tag = 'D12'; Name = 'Delphi 12' },
@@ -80,7 +82,7 @@ function Register-Package($v, [string]$Platform, [string]$KeyName) {
     New-Item -ItemType Directory -Force $targetDir | Out-Null
     $target = Join-Path $targetDir $file
     Copy-Item -LiteralPath $source -Destination $target -Force
-    $key.SetValue($target, $Description, [Microsoft.Win32.RegistryValueKind]::String)
+    $key.SetValue($target, $PackageDescription, [Microsoft.Win32.RegistryValueKind]::String)
     return $true
   } finally { $key.Close() }
 }

@@ -27,7 +27,7 @@ $installations = @{
     '12' = @{ Path = 'C:\Programas\Embarcadero\Delphi_12_3'; Bds = '23.0'; Ide64 = $true }
     '13' = @{ Path = 'C:\Programas\Embarcadero\Delphi_13_1_v37'; Bds = '37.0'; Ide64 = $true }
 }
-$description = 'CS.Coder - Unit Styler'
+$description = 'CS.Coder - Unit Styler (https://www.cscoder.com.br)'
 $binRoot = Join-Path $env:LOCALAPPDATA 'CSCoder\UnitStyler\bin'
 $versions = if ($Version -contains 'All') { '11','12','13' } else { $Version | Sort-Object -Unique }
 $failed = $false

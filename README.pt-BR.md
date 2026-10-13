@@ -9,7 +9,7 @@
 
 [English](README.md) | **Português (Brasil)**
 
-**Versão:** 0.26.10.12d (beta) · **Licença:** [MIT](LICENSE.txt), gratuito e de código
+**Versão:** 0.26.10.12e (beta) · **Licença:** [MIT](LICENSE.txt), gratuito e de código
 aberto ([resumo em português](LICENCA.txt)) · **Delphi:** 11, 12 e 13 ·
 [**Baixar**](https://github.com/cscoder69/delphi-unit-styler/releases)
 
@@ -61,7 +61,7 @@ configurações são mantidas.
 
 ## Novidades
 
-**0.26.10.12d** é a primeira versão pública. As notas de todas as versões estão na
+**0.26.10.12e**: a descrição do pacote mostra o site da CS.Coder em Component > Install Packages, e o `LICENSE.txt` traz só o texto MIT. As notas de todas as versões estão na
 [página de Releases](https://github.com/cscoder69/delphi-unit-styler/releases).
 
 ## Como usar

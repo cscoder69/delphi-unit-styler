@@ -58,7 +58,7 @@ type
 const
   StylerProduct = 'Unit Styler';
   // Used while the package carries no version resource of its own.
-  StylerVersion = '0.26.10.12d';
+  StylerVersion = '0.26.10.12e';
   StylerDeveloper = 'CS.Coder';
   StylerSiteUrl = 'https://www.cscoder.com.br';
   StylerSiteText = 'www.cscoder.com.br';

@@ -52,7 +52,16 @@ Copy-Item (Join-Path $Root 'installer-readme\README.txt'), (Join-Path $Root 'ins
 Get-ChildItem -LiteralPath $Dist -Filter 'CSCoderUnitStyler-*.zip' | Remove-Item -Force
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $Zip = "$Stage.zip"
-[System.IO.Compression.ZipFile]::CreateFromDirectory($Stage, $Zip)
+Add-Type -AssemblyName System.IO.Compression
+# Entry by entry, with forward slashes in the names: CreateFromDirectory of Windows
+# PowerShell writes backslashes, which other systems do not read as folders.
+$out = [System.IO.Compression.ZipFile]::Open($Zip, [System.IO.Compression.ZipArchiveMode]::Create)
+try {
+  foreach ($file in (Get-ChildItem -LiteralPath $Stage -Recurse -File | Sort-Object FullName)) {
+    $name = $file.FullName.Substring($Stage.Length + 1).Replace('\', '/')
+    [void][System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($out, $file.FullName, $name, [System.IO.Compression.CompressionLevel]::Optimal)
+  }
+} finally { $out.Dispose() }
 Remove-Item -LiteralPath $Stage -Recurse -Force
 
 Write-Output "dist ready: $Zip ($((Get-Item -LiteralPath $Zip).Length) bytes)"

@@ -9,7 +9,7 @@
 
 **English** | [Português (Brasil)](README.pt-BR.md)
 
-**Version:** 0.26.10.12d (beta) · **License:** [MIT](LICENSE.txt), free and open source ·
+**Version:** 0.26.10.12e (beta) · **License:** [MIT](LICENSE.txt), free and open source ·
 **Delphi:** 11, 12 and 13 · [**Download**](https://github.com/cscoder69/delphi-unit-styler/releases)
 
 CS.Coder Unit Styler is an extension for the Delphi IDE that organizes the `uses` clauses
@@ -57,7 +57,7 @@ kept.
 
 ## What's new
 
-**0.26.10.12d** is the first public version. The notes of every version are on the
+**0.26.10.12e**: the package description shows the CS.Coder site in Component > Install Packages, and `LICENSE.txt` holds the MIT text only. The notes of every version are on the
 [Releases page](https://github.com/cscoder69/delphi-unit-styler/releases).
 
 ## Using it
