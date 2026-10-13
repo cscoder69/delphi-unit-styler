@@ -264,37 +264,6 @@ Nenhum dos dois comandos toca nos seus projetos, nem nas pastas `.backup` dentro
 - Nada é gravado ao lado do seu projeto, a não ser a pasta `.backup` descrita acima.
 - O botão **Pasta das configurações** abre essa pasta no Explorer.
 
-## Compilar e testar a partir do código
-
-```powershell
-.\build.ps1 -Target Package -Version 12 -Platform Win64
-.\build.ps1 -Target Demo -Version 11 -Platform Win32
-.\test.ps1 -Version 12 -Platform Win32
-```
-
-- `build.ps1` compila o pacote ou o programa de demonstração em `build\`.
-- O programa de demonstração (`demo\`) mostra as janelas funcionando sobre três units de
-  exemplo em memória, fora da IDE. Não abre projeto nem grava arquivo.
-- `test.ps1` compila e roda os programas de teste de `tests\`: o motor, as configurações
-  e o processamento em lote de arquivos em todas as codificações aceitas.
-- `ide-selftest.ps1` roda o pacote dentro de um Delphi real, em perfil de registro
-  isolado, sem interação.
-- `dev-install.ps1` compila o pacote a partir do código e instala no seu Delphi, para
-  desenvolvimento: `.\dev-install.ps1`, ou `-Version 12` para uma versão só, `-Uninstall`
-  para remover, `-DryRun` para ver o que seria feito. Não é o instalador do zip.
-- `package.ps1` compila os cinco pacotes e monta `dist\CSCoderUnitStyler-<versão>.zip`
-  com o instalador de `installer\` e os textos de `installer-readme\`. A versão vem da
-  constante `StylerVersion`.
-- `installer-test.ps1` testa esse zip: instala em um ramo de registro inventado e em uma
-  pasta temporária, depois carrega o pacote instalado em cada IDE, em perfil isolado.
-
-No início de `build.ps1`, `test.ps1`, `dev-install.ps1`, `ide-selftest.ps1` e
-`installer-test.ps1` há uma tabela com a pasta de instalação de cada versão do Delphi.
-Ajuste para o seu computador. Eles precisam dos compiladores de linha de comando do
-Delphi (`dcc32`, `dcc64` e `brcc32`), que vêm com o Delphi.
-
-Não há `.dproj`. Há um `.dpk` por versão do Delphi, e todos usam as mesmas units.
-
 ## Estrutura do repositório
 
 - `src/core/`: o motor que lê e reescreve as cláusulas `uses`, sem depender da IDE nem

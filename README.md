@@ -259,39 +259,6 @@ Neither command touches your projects, nor the `.backup` folders inside them.
 - Nothing is written next to your project, except the `.backup` folder described above.
 - The **Settings folder** button opens this folder in Explorer.
 
-## Build and test from source
-
-```powershell
-.\build.ps1 -Target Package -Version 12 -Platform Win64
-.\build.ps1 -Target Demo -Version 11 -Platform Win32
-.\test.ps1 -Version 12 -Platform Win32
-```
-
-- `build.ps1` builds the package or the demonstration program into `build\`.
-- The demonstration program (`demo\`) shows the windows working on three sample units in
-  memory, outside the IDE. It opens no project and writes no file.
-- `test.ps1` builds and runs the test programs in `tests\`: the engine, the settings and
-  the batch processing of files in every supported encoding.
-- `ide-selftest.ps1` runs the package inside a real Delphi, in an isolated registry
-  profile, with no interaction.
-- `dev-install.ps1` builds the package from the source code and installs it in your
-  Delphi, for development: `.\dev-install.ps1`, or `-Version 12` for one version,
-  `-Uninstall` to remove it, `-DryRun` to see what would be done. It is not the installer
-  of the zip.
-- `package.ps1` builds the five packages and assembles `dist\CSCoderUnitStyler-<version>.zip`
-  with the installer of `installer\` and the texts of `installer-readme\`. The version
-  comes from the constant `StylerVersion`.
-- `installer-test.ps1` tests that zip: it installs into a made-up registry branch and a
-  temporary folder, then loads the installed package in each IDE, in an isolated profile.
-
-At the top of `build.ps1`, `test.ps1`, `dev-install.ps1`, `ide-selftest.ps1` and
-`installer-test.ps1` there is a table with the installation folder of each Delphi
-version. Change it to match your computer. They need the Delphi command-line compilers
-(`dcc32`, `dcc64` and `brcc32`), which come with Delphi.
-
-There is no `.dproj`. There is one `.dpk` per Delphi version, and all of them share the
-same units.
-
 ## Repository structure
 
 - `src/core/`: the engine that reads and rewrites `uses` clauses, with no dependency on
