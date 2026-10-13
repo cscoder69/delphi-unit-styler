@@ -42,6 +42,50 @@ outside the IDE; project and unit names are examples.*
   themes.
 - **In your language.** English, Portuguese, Spanish, German and French.
 
+## Installation
+
+### Supported versions
+
+| Delphi | 32-bit IDE | 64-bit IDE |
+|---|---|---|
+| 11 Alexandria | Yes | Not applicable |
+| 12 Athens | Yes | Yes |
+| 13 Florence | Yes | Yes |
+
+### Steps
+
+The packages are built with Delphi 11.3, 12.3 and 13.1. A single download covers all of
+them, and no compiler is needed to install.
+
+1. **Download.** Open the [Releases page](https://github.com/cscoder69/delphi-unit-styler/releases),
+   pick the latest release and, under **Assets**, download the file named
+   `CSCoderUnitStyler-<version>.zip`. Do not pick "Source code": that one has no
+   installer.
+2. **Extract.** Unzip the whole file into a folder of your choice. `Install.bat` needs the
+   other files that come with it.
+3. **Close Delphi.** Close every Delphi window. The installer stops with a message if
+   Delphi is running, because the IDE rewrites its package list when it closes.
+4. **Run `Install.bat`.** Double-click it. It needs no administrator rights and installs
+   for the current Windows user, in every supported Delphi it finds. It prints one line per
+   Delphi, for example `[OK] Delphi 12 (32-bit, 64-bit)`.
+5. **Open Delphi.** The **CS.Coder** menu appears in the main menu of the IDE, with
+   **Unit Styler** inside it.
+
+A Delphi that this Windows user has never opened is reported as `[--]`: open it once,
+close it and run `Install.bat` again.
+
+### Checking each stage
+
+| Stage | How to tell |
+|---|---|
+| Installation completed | `Install.bat` printed `[OK]` for your Delphi. The packages are in `%LOCALAPPDATA%\CSCoder\UnitStyler\bin`. |
+| Package loaded | **Component > Install Packages** lists it, checked, as "CS.Coder - Unit Styler". |
+| Commands available | The main menu has **CS.Coder > Unit Styler**, with Organize uses, Settings and About. The right-click menu of the code editor has **Unit Styler: Organize uses...**. **About** shows the installed version. |
+
+### Updating
+
+Download the newer zip, close Delphi and run its `Install.bat`. Your settings are kept.
+
 ## Using it
 
 Open a project, then open **Organize uses** in any of these ways:
@@ -155,77 +199,6 @@ There is one subfolder per run, repeating the folder structure of the project. I
 copy fails, the unit is not changed. **Clean backups...** removes only the folders created
 by the tool.
 
-## Installation
-
-### Supported versions
-
-| Delphi | 32-bit IDE | 64-bit IDE |
-|---|---|---|
-| 11 Alexandria | Yes | Not applicable |
-| 12 Athens | Yes | Yes |
-| 13 Florence | Yes | Yes |
-
-### Steps
-
-The packages are built with Delphi 11.3, 12.3 and 13.1. A single download covers all of
-them, and no compiler is needed to install.
-
-1. **Download.** Open the [Releases page](https://github.com/cscoder69/delphi-unit-styler/releases),
-   pick the latest release and, under **Assets**, download the file named
-   `CSCoderUnitStyler-<version>.zip`. Do not pick "Source code": that one has no
-   installer.
-2. **Extract.** Unzip the whole file into a folder of your choice. `Install.bat` needs the
-   other files that come with it.
-3. **Close Delphi.** Close every Delphi window. The installer stops with a message if
-   Delphi is running, because the IDE rewrites its package list when it closes.
-4. **Run `Install.bat`.** Double-click it. It needs no administrator rights and installs
-   for the current Windows user, in every supported Delphi it finds. It prints one line per
-   Delphi, for example `[OK] Delphi 12 (32-bit, 64-bit)`.
-5. **Open Delphi.** The **CS.Coder** menu appears in the main menu of the IDE, with
-   **Unit Styler** inside it.
-
-A Delphi that this Windows user has never opened is reported as `[--]`: open it once,
-close it and run `Install.bat` again.
-
-### Checking each stage
-
-| Stage | How to tell |
-|---|---|
-| Installation completed | `Install.bat` printed `[OK]` for your Delphi. The packages are in `%LOCALAPPDATA%\CSCoder\UnitStyler\bin`. |
-| Package loaded | **Component > Install Packages** lists it, checked, as "CS.Coder - Unit Styler". |
-| Commands available | The main menu has **CS.Coder > Unit Styler**, with Organize uses, Settings and About. The right-click menu of the code editor has **Unit Styler: Organize uses...**. **About** shows the installed version. |
-
-### Updating
-
-Download the newer zip, close Delphi and run its `Install.bat`. Your settings are kept.
-
-## Uninstallation
-
-Close Delphi first. The uninstaller, like the installer, stops if Delphi is running.
-
-### Remove the extension and keep your settings
-
-```
-Uninstall.bat
-```
-
-This removes Unit Styler from every Delphi version and deletes the installed packages.
-Your rules and the settings of your projects are kept, so installing again brings
-everything back.
-
-### Remove the extension and its settings
-
-```
-Uninstall.bat /data
-```
-
-> [!WARNING]
-> This also deletes the rules of every Delphi version (formatting, priorities, groups,
-> protected units, shortcut and language) and the settings of every project. It cannot be
-> undone. To keep a copy, save the folder `%LOCALAPPDATA%\CSCoder\UnitStyler` before
-> running it.
-
-Neither command touches your projects, nor the `.backup` folders inside them.
 ## Specifications
 
 | | |
@@ -258,6 +231,34 @@ Neither command touches your projects, nor the `.backup` folders inside them.
   moved or renamed.
 - Nothing is written next to your project, except the `.backup` folder described above.
 - The **Settings folder** button opens this folder in Explorer.
+
+## Uninstallation
+
+Close Delphi first. The uninstaller, like the installer, stops if Delphi is running.
+
+### Remove the extension and keep your settings
+
+```
+Uninstall.bat
+```
+
+This removes Unit Styler from every Delphi version and deletes the installed packages.
+Your rules and the settings of your projects are kept, so installing again brings
+everything back.
+
+### Remove the extension and its settings
+
+```
+Uninstall.bat /data
+```
+
+> [!WARNING]
+> This also deletes the rules of every Delphi version (formatting, priorities, groups,
+> protected units, shortcut and language) and the settings of every project. It cannot be
+> undone. To keep a copy, save the folder `%LOCALAPPDATA%\CSCoder\UnitStyler` before
+> running it.
+
+Neither command touches your projects, nor the `.backup` folders inside them.
 
 ## Other CS.Coder tools
 
