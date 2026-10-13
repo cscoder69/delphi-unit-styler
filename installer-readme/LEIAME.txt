@@ -1,0 +1,56 @@
+﻿*******************************************************************************
+*  VERSÃO BETA                                                                *
+*  O CS.Coder Unit Styler está em beta: ainda está em teste e pode ter        *
+*  defeitos. Mantenha o projeto em controle de versão ou deixe a cópia de     *
+*  segurança ligada, e confira a prévia antes de aplicar alterações em um     *
+*  projeto inteiro.                                                           *
+*  Avise de qualquer problema que encontrar:                                  *
+*  https://github.com/cscoder69/delphi-unit-styler/issues                     *
+*******************************************************************************
+
+CS.Coder - Unit Styler (beta)
+=============================
+
+Uma extensão para a IDE do Delphi que organiza as cláusulas uses das units do
+projeto aberto: ordenadas, indentadas, com as prioridades e os grupos que você
+definir. Só roda quando você pede, mostra uma prévia e pede confirmação antes
+de alterar qualquer coisa.
+
+Funciona no Delphi 11, 12 e 13 (IDE de 32 bits, e a IDE de 64 bits do 12 e
+do 13).
+
+
+INSTALAR
+  1. Feche o Delphi.
+  2. Dê um duplo clique em Install.bat.
+  3. Abra o Delphi. Os comandos estão no menu CS.Coder > Unit Styler, no atalho
+     Ctrl+Alt+U com o editor de código em foco, e no menu do botão direito do
+     editor de código.
+
+  A instalação vale para todos os Delphi compatíveis deste usuário do Windows
+  e não pede administrador. Executar Install.bat de novo atualiza para a
+  versão que está nesta pasta e mantém as suas configurações.
+
+DESINSTALAR
+  1. Feche o Delphi.
+  2. Dê um duplo clique em Uninstall.bat.
+
+  Suas configurações são mantidas. Para apagar também, execute:
+  Uninstall.bat /data
+
+ONDE FICAM AS COISAS
+  Pacotes:                   %LOCALAPPDATA%\CSCoder\UnitStyler\bin
+  Regras:                    %LOCALAPPDATA%\CSCoder\UnitStyler\D11\settings.json
+                             (D12 e D13 para as outras versões). Cada Delphi
+                             tem as suas regras, o seu atalho e o seu idioma.
+  Configurações de projeto:  %LOCALAPPDATA%\CSCoder\UnitStyler\projects
+                             Nenhuma configuração fica no registro do Windows.
+
+IDIOMA
+  Português, inglês, espanhol, alemão e francês. As janelas seguem o idioma do
+  Windows; para escolher outro, use Configurações > Idioma.
+
+LICENÇA
+  Código aberto, licença MIT. Veja LICENCA.txt (resumo) e LICENSE.txt.
+
+  https://github.com/cscoder69/delphi-unit-styler

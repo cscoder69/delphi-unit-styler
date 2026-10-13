@@ -1,0 +1,14 @@
+﻿package CSCoder.UnitStyler.MenuProbe;
+
+// Test-only package for installer-test.ps1: it holds no unit of the product
+// and only reports whether the installed Unit Styler package is in the IDE.
+
+{$DESIGNONLY ON}
+{$IMPLICITBUILD OFF}
+
+requires rtl, vcl, designide;
+
+contains
+  CSCoder.Styler.MenuProbe in '..\CSCoder.Styler.MenuProbe.pas';
+
+end.

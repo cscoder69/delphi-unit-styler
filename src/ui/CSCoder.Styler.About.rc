@@ -1,0 +1,6 @@
+// Shown by the About window (CSCoder.Styler.About). Compiled by build.ps1 and
+// ide-selftest.ps1 from this folder, so the paths are relative to it. Forward
+// slashes: brcc32 does not open "..\\..\\" paths.
+CSSTYLERICON RCDATA "../../assets/CSCoderUnitStyler.png"
+CSSTYLERLICENSE RCDATA "../../LICENSE.txt"
+CSSTYLERLICENCA RCDATA "../../LICENCA.txt"

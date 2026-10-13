@@ -1,0 +1,34 @@
+# Build output (rebuilt by build.ps1, test.ps1, dev-install.ps1 and package.ps1).
+# The zip in dist/ is the one thing built that is published: it carries the .bpl
+# files, so nobody needs a compiler to install. A folder left in dist/ is not.
+/dist/*/
+/build/
+*.dcu
+*.res
+*.bpl
+*.dcp
+*.exe
+
+# Delphi IDE leftovers
+__history/
+__recovery/
+*.identcache
+*.local
+*.dproj.local
+*.stat
+
+# Internal working notes (kept out of the public repository by the author's choice)
+.claude/
+/CLAUDE.md
+/AGENTS.md
+/notas/
+/docs/*
+!/docs/screenshots/
+
+# Copies of real projects used in local tests: never part of any repository
+projetos-reais/
+
+# Temporary and backup files
+*.tmp
+*.bak
+.backup/
