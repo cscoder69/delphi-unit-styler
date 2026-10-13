@@ -259,23 +259,6 @@ Neither command touches your projects, nor the `.backup` folders inside them.
 - Nothing is written next to your project, except the `.backup` folder described above.
 - The **Settings folder** button opens this folder in Explorer.
 
-## Repository structure
-
-- `src/core/`: the engine that reads and rewrites `uses` clauses, with no dependency on
-  the IDE or on VCL
-- `src/config/`: settings files
-- `src/i18n/`: the texts in the five languages
-- `src/ide/`: integration with the IDE (menu, editor, batch, backup)
-- `src/ui/`: the windows
-- `packages/`: one `.dpk` per Delphi version
-- `demo/`: the demonstration program
-- `tests/`: test programs
-- `assets/`: the product icon
-- `installer/`: `Install.bat`, `Uninstall.bat` and the script they run, as they go in the zip
-- `installer-readme/`: the texts that go in the zip
-- `dist/`: the zip of the current version, ready to install
-- `docs/screenshots/`: images used by this page
-
 ## Other CS.Coder tools
 
 - [CS.Coder Project Hub](https://github.com/cscoder69/delphi-project-hub): project

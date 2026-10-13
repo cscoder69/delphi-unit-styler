@@ -264,23 +264,6 @@ Nenhum dos dois comandos toca nos seus projetos, nem nas pastas `.backup` dentro
 - Nada é gravado ao lado do seu projeto, a não ser a pasta `.backup` descrita acima.
 - O botão **Pasta das configurações** abre essa pasta no Explorer.
 
-## Estrutura do repositório
-
-- `src/core/`: o motor que lê e reescreve as cláusulas `uses`, sem depender da IDE nem
-  da VCL
-- `src/config/`: arquivos de configuração
-- `src/i18n/`: os textos nos cinco idiomas
-- `src/ide/`: integração com a IDE (menu, editor, lote, cópia de segurança)
-- `src/ui/`: as janelas
-- `packages/`: um `.dpk` por versão do Delphi
-- `demo/`: o programa de demonstração
-- `tests/`: programas de teste
-- `assets/`: o ícone do produto
-- `installer/`: `Install.bat`, `Uninstall.bat` e o script que eles executam, como vão no zip
-- `installer-readme/`: os textos que vão no zip
-- `dist/`: o zip da versão atual, pronto para instalar
-- `docs/screenshots/`: imagens usadas nesta página
-
 ## Outras ferramentas CS.Coder
 
 - [CS.Coder Hub de Projetos](https://github.com/cscoder69/delphi-project-hub): atalhos
